@@ -1,4 +1,4 @@
-#123456
+#first test
 
 def main():
     print('gugugu')
