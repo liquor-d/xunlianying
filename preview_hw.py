@@ -10,7 +10,7 @@ mid.tracks.append(track2)
 mid.tracks.append(track3)
 tra = [track, track2, track3]
 
-bpm = 68
+bpm = 72
 
 def taptap(note, length, unit = track, base_num=0, delay=0, velocity=1.2, channel=0):   #第一声部
    meta_time = 60 * 60 * 10 / bpm
@@ -144,20 +144,114 @@ def verse3(track):
    taptap(7, 0.25, track, 2)
    taptap(4, 0.5, track, 2)
 
-def main():
-    verse(track)   # 主旋
+def zhuxuan(track):
+    taptap(3, 1, track, 1)
+    taptap(7, 1, track, 1)
+    taptap(3, 1, track, 1)
+    taptap(3, 0.5, track, 1)
+    taptap(2, 0.5, track, 1)
+    taptap(3, 0.5, track, 1)
+    taptap(3, 0.5, track, 1)
+    taptap(4, 0.5, track, 1)
+    taptap(5, 1, track, 1)
+    taptap(3, 0.5, track, 1)
+    taptap(3, 0.5, track, 1)
+    taptap(7, 0.5, track)
+    taptap(7, 0.5, track, 0, 0.5)
+    taptap(3, 0.5, track, 1)
+    taptap(3, 0.5, track, 1)
+    taptap(3, 0.5, track, 1)
+    taptap(7, 0.5, track)
+    taptap(4, 0.5, track, 1)
+    taptap(3, 0.5, track, 1)
 
+    taptap(7, 0.25, track, 0, 0.5)
+    taptap(3, 0.25, track, 1)
+    taptap(4, 0.25, track, 1)
+    taptap(7, 0.25, track, 1)
+    taptap(3, 0.25, track, 2)
+    taptap(4, 0.25, track, 2)
+
+    taptap(7, 0.25, track, 2)
+    taptap(4, 0.25, track, 2)
+    taptap(3, 0.25, track, 2)
+    taptap(7, 0.25, track, 1)
+    taptap(4, 0.25, track, 1)
+    taptap(3, 0.25, track, 1)
+    taptap(7, 0.25, track)
+    taptap(3, 0.25, track, 1)
+
+def zhuxuan2(track):
+    taptap(5, 4, track)
+    taptap(6, 4, track)
+    taptap(4, 4, track)
+    taptap(1, 2, track)
+    taptap(1, 1, track, 1)
+    taptap(1, 1, track)
+
+def zhuxuan3(track):
+    taptap(5, 4, track, -1)
+    taptap(6, 4, track, -1)
+    taptap(7, 4, track, -1)
+    taptap(1, 2, track)
+    taptap(3, 1, track, 1)
+    taptap(1, 1, track)
+
+def zhuxuan22(track):
+    taptap(5, 1.5, track, -1)
+    taptap(5, 2, track, 0, 0.5)
+    taptap(6, 1.5, track, -1)
+    taptap(6, 2, track, 0, 0.5)
+    taptap(7, 1.5, track, -1)
+    taptap(7, 2, track, 0, 0.5)
+    taptap(1, 2, track)
+    taptap(1, 1, track, 1)
+    taptap(1, 1, track)
+
+def zhuxuan33(track):
+    taptap(5, 1.5, track, -2)
+    taptap(5, 0.5, track, -1)
+    taptap(7, 2, track, -1)
+    taptap(6, 1.5, track, -2)
+    taptap(6, 0.5, track, -1)
+    taptap(1, 2, track)
+    taptap(7, 1.5, track, -2)
+    taptap(7, 0.5, track, -1)
+    taptap(2, 2, track)
+    taptap(1, 2, track, -1)
+    taptap(3, 1, track)
+    taptap(1, 1, track, -1)
+
+def main():
+    verse(track)   # 伴-主旋
     verse2(track2)   #和声
     verse2(track2)
     verse2(track2)
     verse2(track2)
+    verse3(track3)   #和声
+    verse3(track3)
+    verse3(track3)
+    verse3(track3)
 
+    verse(track)   # 伴-主旋
+    verse2(track2)   #和声
+    verse2(track2)
+    verse2(track2)
+    verse2(track2)
     verse3(track3)   #和声
     verse3(track3)
     verse3(track3)
     verse3(track3)
     # format2 = [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1]
     # format3 = [0, 1, 2, 1, 0, 1, 2, 1, 0, 1, 2, 1, 0, 1, 2, 1]
+
+    zhuxuan(track)
+    zhuxuan2(track2)
+    zhuxuan3(track3)
+
+    zhuxuan(track)
+    zhuxuan22(track2)
+    zhuxuan33(track3)
 
     mid.save('/Users/siwen/Desktop/d4w.mid')
 
