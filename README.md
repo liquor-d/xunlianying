@@ -13,5 +13,5 @@ pip install mido
 
 ### Usage
 ```python
-from mido import
+from mido import Message, MidiFile, MidiTrack
 ```
