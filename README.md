@@ -7,11 +7,11 @@ Use python to create MIDI music
 
 ### Installation
 
-'''
+```
 pip install mido
-'''
+```
 
 ### Usage
-'''python
+```python
 from mido import
-'''
+```
