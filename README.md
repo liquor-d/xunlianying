@@ -1,3 +1,17 @@
-# 工程训练营用的
+# xly
 
-# 预习作业
+xly stores my code during 2020 Summer training camp
+
+## preview_hw
+Use python to create MIDI music
+
+### Installation
+
+'''
+pip install mido
+'''
+
+### Usage
+'''python
+from mido import
+'''
