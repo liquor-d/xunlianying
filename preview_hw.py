@@ -34,7 +34,7 @@ def mtaptap(yin, format, length, unit = track2, base_num= 0, velocity =1.0, chan
        unit.append(Message('note_off', note=base_note + base_num[dis]*12 + sum(major_notes[0:note]),\
         velocity=round(64*velocity), time=time, channel=channel))
 
-def verse(track):     
+def verse(track): 
    taptap(5, 1, track, -1)   
    mtaptap([3, 3], [0, 1], 1, track, [1, 1])  
    taptap(4, 1, track, -1)       
@@ -100,7 +100,7 @@ def main():
     for i in range(4):   
         verse3(track3)     #3声部  伴2
 
-    mid.save('/Users/siwen/Desktop/d4w.mid')
+    mid.save('/Users/siwen/Desktop/d4w77.mid')
 
 if __name__ == "__main__":
     main()
