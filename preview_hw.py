@@ -70,7 +70,7 @@ def verse(track):      #主旋律  指定音轨
 
    taptap(3, 4, track)
 
-def verse2(track):     #伴奏  指定音轨
+def verse2(track):    
    mtaptap([3, 7], [0, 1, 1], 1.5, track, [3, 2])   
    mtaptap([2, 3, 4, 5], [0, 1, 2, 3], 1, track, [3, 3, 2, 3])
    mtaptap([5, 3, 4], [0, 1, 2], 1.5, track, [2, 3, 2])
@@ -94,17 +94,13 @@ def verse3(track):
 
 def main():
     for i in range(3):
-        tra[i].append(Message('program_change', program=0, time=0))  #设置音色
+        tra[i].append(Message('program_change', program=0, time=0))   #设置音色
 
-    verse(track)   # 伴-主旋
-    verse2(track2)   #和声
-    verse2(track2)
-    verse2(track2)
-    verse2(track2)
-    verse3(track3)   #和声
-    verse3(track3)
-    verse3(track3)
-    verse3(track3)
+    verse(track)      #主旋
+    for i in range(4):   
+        verse2(track2)     #2声部  伴1
+    for i in range(4):   
+        verse3(track3)     #3声部  伴2
 
     mid.save('/Users/siwen/Desktop/d4w.mid')
 
